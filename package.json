@@ -1,0 +1,23 @@
+{
+  "name": "epam/stopstigmawp",
+  "description": "The frontend assets for the insight project",
+  "license": "proprietary",
+  "engines": {
+    "node": "12.*",
+    "yarn": "1.*"
+  },
+  "scripts": {
+    "build": "",
+    "build-dev": "",
+    "watch": "",
+    "server": ""
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}

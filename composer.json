@@ -1,0 +1,119 @@
+{
+  "name": "epam/stopstigmawp",
+  "type": "project",
+  "license": "GPL-3.0-or-later",
+  "description": "",
+  "authors": [
+    {
+      "name": "Pavel Burylichau",
+      "email": "Pavel_Burylichau@epam.com"
+    },
+    {
+      "name": "Anatoly Yumashev",
+      "email": "Anatoly_Yumashev@epam.com"
+    },
+    {
+      "name": "Anton Zakharenka",
+      "email": "Anton_Zakharenka@epam.com"
+    },
+    {
+      "name": "Iryna Kharkevich",
+      "email": "Iryna_Kharkevich@epam.com"
+    }
+  ],
+  "keywords": [
+    "composer",
+    "epam",
+    "wordpress",
+    "wp",
+    "wp-config",
+    "php",
+    "open-source"
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "teplitsa/kandinsky",
+        "type": "wordpress-theme",
+        "version": "dev-master",
+        "source": {
+          "url": "https://github.com/Teplitsa/kandinsky.git",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "composer/installers": "v1.10.0",
+    "vlucas/phpdotenv": "^3.6.8",
+    "oscarotero/env": "^1.2.0",
+    "johnpbloch/wordpress-core": "5.6.1",
+    "roots/wp-config": "1.0.0",
+    "roots/wp-password-bcrypt": "1.0.0",
+    "teplitsa/kandinsky": "dev-master",
+    "htmlburger/carbon-fields-plugin": "^3.2"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master",
+    "symfony/var-dumper": "5.*",
+    "wpackagist-plugin/query-monitor": "^3.5"
+  },
+  "config": {
+    "sort-packages": false,
+    "vendor-dir": "web/vendor/"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-paths": {
+      "web/wp-content/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin"
+      ],
+      "web/wp-content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "web/wp-content/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
+    }
+  },
+  "scripts": {
+    "pre-update-cmd": [
+      "@pre-install-cmd"
+    ],
+    "post-update-cmd": [
+      "@post-install-cmd"
+    ],
+    "pre-install-cmd": [
+      "@build-project-deps",
+      "@pre-clean"
+    ],
+    "post-install-cmd": [
+      "@post-wp-clean",
+      "@post-wp-install"
+    ],
+    "build-project-deps": [
+    ],
+    "pre-clean": [
+      "cd web && rm -rf wp-admin wp-includes xmlrpc.php index.php $(find . -name wp-*.php ! -name wp-config.php)"
+    ],
+    "post-wp-clean": [
+      "cd ./web/vendor/johnpbloch/wordpress-core/ && rm -rf composer.json license.txt readme.html",
+      "cd ./web/vendor/johnpbloch/wordpress-core/wp-content/plugins/ && rm -rf hello.php akismet",
+      "rm -rf ./web/vendor/johnpbloch/wordpress-core/wp-content/themes/twenty*"
+    ],
+    "post-wp-install": [
+      "cp -Rf ./web/vendor/johnpbloch/wordpress-core/ ./web",
+      "rm -rf ./web/vendor/johnpbloch/wordpress-core"
+    ],
+    "test": [
+    ]
+  }
+}
