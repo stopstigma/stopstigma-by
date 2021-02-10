@@ -67,19 +67,19 @@
   },
   "config": {
     "sort-packages": false,
-    "vendor-dir": "web/vendor/"
+    "vendor-dir": "public/vendor/"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "web/wp-content/mu-plugins/{$name}/": [
+      "public/wp-content/mu-plugins/{$name}/": [
         "type:wordpress-muplugin"
       ],
-      "web/wp-content/plugins/{$name}/": [
+      "public/wp-content/plugins/{$name}/": [
         "type:wordpress-plugin"
       ],
-      "web/wp-content/themes/{$name}/": [
+      "public/wp-content/themes/{$name}/": [
         "type:wordpress-theme"
       ]
     }
@@ -102,16 +102,16 @@
     "build-project-deps": [
     ],
     "pre-clean": [
-      "cd web && rm -rf wp-admin wp-includes xmlrpc.php index.php $(find . -name wp-*.php ! -name wp-config.php)"
+      "cd public && rm -rf wp-admin wp-includes xmlrpc.php index.php $(find . -name wp-*.php ! -name wp-config.php)"
     ],
     "post-wp-clean": [
-      "cd ./web/vendor/johnpbloch/wordpress-core/ && rm -rf composer.json license.txt readme.html",
-      "cd ./web/vendor/johnpbloch/wordpress-core/wp-content/plugins/ && rm -rf hello.php akismet",
-      "rm -rf ./web/vendor/johnpbloch/wordpress-core/wp-content/themes/twenty*"
+      "cd ./public/vendor/johnpbloch/wordpress-core/ && rm -rf composer.json license.txt readme.html",
+      "cd ./public/vendor/johnpbloch/wordpress-core/wp-content/plugins/ && rm -rf hello.php akismet",
+      "rm -rf ./public/vendor/johnpbloch/wordpress-core/wp-content/themes/twenty*"
     ],
     "post-wp-install": [
-      "cp -Rf ./web/vendor/johnpbloch/wordpress-core/ ./web",
-      "rm -rf ./web/vendor/johnpbloch/wordpress-core"
+      "cp -Rf ./public/vendor/johnpbloch/wordpress-core/ ./public",
+      "rm -rf ./public/vendor/johnpbloch/wordpress-core"
     ],
     "test": [
     ]

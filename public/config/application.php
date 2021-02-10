@@ -24,8 +24,9 @@ Env::init();
 /**
  * Use Dotenv to set required environment variables and load .env file in root
  */
-$dotenv = Dotenv\Dotenv::create($root_dir);
-if (file_exists($root_dir . '/.env')) {
+$env_dir = $root_dir . '/../';
+$dotenv = Dotenv\Dotenv::create($env_dir);
+if (file_exists($env_dir . '.env')) {
     $dotenv->load();
     $dotenv->required(['WP_HOME', 'WP_SITEURL']);
     if (!env('DATABASE_URL')) {
@@ -55,6 +56,7 @@ Config::define('WP_CONTENT_URL', Config::get('WP_HOME') . Config::get('CONTENT_D
 /**
  * DB settings
  */
+
 Config::define('DB_NAME', env('DB_NAME'));
 Config::define('DB_USER', env('DB_USER'));
 Config::define('DB_PASSWORD', env('DB_PASSWORD'));
