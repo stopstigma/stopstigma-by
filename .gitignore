@@ -8,6 +8,7 @@ public/wp-content/plugins/*
 !public/wp-content/themes/
 public/wp-content/themes/*
 !public/wp-content/themes/kandinsky-child
+!public/wp-content/themes/kandinsky-stopstigma
 
 !public/wp-content/mu-plugins/
 public/wp-content/upgrade
