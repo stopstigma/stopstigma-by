@@ -1,17 +1,17 @@
 # Application
-!web/wp-content/
-web/wp-content/*
-!web/wp-content/plugins/
-web/wp-content/plugins/*
-!web/wp-content/plugins/stopstigma-core-plugin
+!public/wp-content/
+public/wp-content/*
+!public/wp-content/plugins/
+public/wp-content/plugins/*
+!public/wp-content/plugins/stopstigma-core-plugin
 
-!web/wp-content/themes/
-web/wp-content/themes/*
-!web/wp-content/themes/kandinsky-child
+!public/wp-content/themes/
+public/wp-content/themes/*
+!public/wp-content/themes/kandinsky-child
 
-!web/wp-content/mu-plugins/
-web/wp-content/upgrade
-web/wp-content/uploads/*
+!public/wp-content/mu-plugins/
+public/wp-content/upgrade
+public/wp-content/uploads/*
 
 node_modules
 
@@ -29,13 +29,13 @@ ehthumbs.db
 *.swp
 Thumbs.db
 env.ini
-web/vendor
-web/wp-admin
-web/wp-includes
-web/xmlrpc.php
-web/*.php
-web/*.txt
-web/*.html
-web/.env
+public/vendor
+public/wp-admin
+public/wp-includes
+public/xmlrpc.php
+public/*.php
+public/*.txt
+public/*.html
+public/.env
 
-!web/wp-config.php
+!public/wp-config.php
