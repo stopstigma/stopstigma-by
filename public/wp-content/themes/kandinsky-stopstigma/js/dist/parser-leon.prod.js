@@ -1,0 +1,1 @@
+"use strict";function callback(e){for(var a=0;a<e.length;a++){var l=e[a],t=$(".mess_hide1").clone().removeClass("mess_hide1");$("#messages1").append(t),$(".league",t).html(l.league),$(".time",t).html(l.time),$(".data",t).html(l.date),$(".name",t).html(l.name),$(".p1",t).html(l.p1),$(".x",t).html(l.x),$(".p2",t).html(l.p2)}}$.getJSON("../parserData/leon.json",callback),callback();

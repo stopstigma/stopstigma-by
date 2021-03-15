@@ -1,0 +1,1 @@
+"use strict";function callback(a){for(var e=0;e<a.length;e++){var l=a[e],t=$(".mess_hide2").clone().removeClass("mess_hide2");$("#messages2").append(t),$(".league",t).html(l.league),$(".data",t).html(l.date),$(".name",t).html(l.name),$(".p1",t).html(l.p1),$(".x",t).html(l.x),$(".p2",t).html(l.p2)}}$.getJSON("../parserData/parimatch.json",callback),callback();
