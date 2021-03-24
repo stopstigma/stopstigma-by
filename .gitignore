@@ -4,6 +4,7 @@ public/wp-content/*
 !public/wp-content/plugins/
 public/wp-content/plugins/*
 !public/wp-content/plugins/stopstigma-core-plugin
+!public/wp-content/plugins/block-post-grid
 
 !public/wp-content/themes/
 public/wp-content/themes/*
