@@ -50,11 +50,11 @@
     }
   ],
   "require": {
-    "php": "^7.4",
+    "php": "^7.3",
     "composer/installers": "v1.10.0",
     "vlucas/phpdotenv": "^3.6.8",
     "oscarotero/env": "^1.2.0",
-    "johnpbloch/wordpress-core": "5.6.1",
+    "johnpbloch/wordpress-core": "^5.7",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "teplitsa/kandinsky": "dev-master",
