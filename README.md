@@ -14,3 +14,20 @@
     - `composer install --optimize-autoloader --no-dev`
 1. переименовать файл `.env.example` в `.env`
 1. заполнить файл `.env` из "секретов"
+
+## Demo server
+
+http://ecsc00a09cbe.epam.com/wp-admin/
+admin
+Fz37CT@^@VENu1x63#
+
+## Snippets
+
+```
+# upload file to server
+/var/www/dev
+```
+
+### sass to scss converter 
+
+https://sass-scss-converter.netlify.app/

@@ -1,3 +1,3 @@
-path: web/
+path: public/
 server:
-  docroot: ./web
+  docroot: ./public
