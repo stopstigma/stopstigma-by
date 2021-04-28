@@ -1,3 +1,17 @@
+$montserrat: 'Montserrat', sans-serif;
+$bgc:             #fff;
+$violet:          #801DE2;
+$violet-dark:     #501990;
+$violet-soft:     #F7EEFF;
+$violet-middle:   #AF74EA;
+$text:            #0B0B0C;
+$gray-middle:     #959595;
+$gray-off:        #F0F0F0;
+$icon:            #4F4F4F;
+$psychoeducation: #D6E2DE;
+$box-shadow:        none;
+$border-none:       none;
+
 .first-section {
 	display: flex;
 	flex-direction: column;
@@ -46,13 +60,13 @@
 		align-items: flex-start;
 		padding: 0 65px 29px;
 		&__date {
-		  font: normal 600 12px/15px $montserrat;
+		  font: normal 600 12px/15px 'Montserrat', sans-serif;
 		  color: $bgc;
 		  padding: 0 0 7px;
 		}
 		&__title {
 		  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
-		  font: normal 600 48px/59px $montserrat;
+		  font: normal 600 48px/59px 'Montserrat', sans-serif;
 		  color: $bgc;
 		}
 		.tags {
@@ -65,7 +79,7 @@
 			margin-right: 8px;
 			padding: 4px 8px;
 			background-color: $violet;
-			font: normal 700 10px/12px $montserrat;
+			font: normal 700 10px/12px 'Montserrat', sans-serif;
 			color: $bgc;
 			text-transform: uppercase;
 			border-radius: 2px;
@@ -115,13 +129,13 @@
 			justify-content: flex-end;
 			align-items: flex-start;
 			&__date {
-			  font: normal 600 12px/15px $montserrat;
+			  font: normal 600 12px/15px 'Montserrat', sans-serif;
 			  color: $bgc;
 			  padding: 0 24px 10px;
 			}
 			&__title {
 			  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
-			  font: normal 600 24px/32px $montserrat;
+			  font: normal 600 24px/32px 'Montserrat', sans-serif;
 			  color: $bgc;
 			  padding: 0 24px 26px;
 			}
@@ -154,7 +168,7 @@
 		.title {
 		  text-transform: uppercase;
 		  color: $text;
-		  font: normal 700 24px/32px $montserrat;
+		  font: normal 700 24px/32px 'Montserrat', sans-serif;
 		  margin-bottom: 11px;
 		  text-decoration: none;
 		  transition: .3s;
@@ -164,7 +178,7 @@
 		}
 		.date {
 		  color: $gray-middle;
-		  font: normal 600 12px/15px $montserrat;
+		  font: normal 600 12px/15px 'Montserrat', sans-serif;
 		  margin-bottom: 15px;
 		}
 		.information {
