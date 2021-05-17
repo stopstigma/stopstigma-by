@@ -3,8 +3,8 @@
 	"name": "create-block/block-post-grid",
 	"title": "Block Post Grid",
 	"category": "widgets",
-	"icon": "megaphone",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"icon": "schedule",
+	"description": "Add post grid",
 	"supports": {
 		"html": false
 	},
