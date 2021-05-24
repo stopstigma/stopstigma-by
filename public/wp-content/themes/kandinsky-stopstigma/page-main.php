@@ -5,7 +5,7 @@
  */
 
 get_header('ss');
-get_sidebar();
+get_sidebar('ss');
 ?>
 
 <div id="primary" class="content-area">
